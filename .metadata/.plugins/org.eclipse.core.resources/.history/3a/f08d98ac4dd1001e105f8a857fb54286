@@ -1,0 +1,117 @@
+package Selenium.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+public class LandingPageFormTest {
+
+
+public static void main(String args[]) throws InterruptedException
+	    {
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver = new ChromeDriver();
+	 
+	        // Maximize the browser
+	        driver.manage().window().maximize();
+	 
+	        // Launch Website
+	        driver.get("https://www.si-global.com/landing/applications-day-in/");
+	        
+	        // Click on "Enquire Now" button overlay
+	        
+	        //driver.findElement(By.className("cont-button")).click();
+	        
+	        try {
+	        	driver.findElement(By.name("submit")).click();
+	        }
+	        catch (Exception e) {        	
+	        }
+	        Thread.sleep(2000);
+	        
+	        //Fill the landing page details	        
+	        driver.findElement(By.id("fname")).sendKeys("Test-siuk");
+	        
+	        try {
+	        	driver.findElement(By.name("submit")).click();
+	        }
+	        catch (Exception e) {        	
+	        }
+	        Thread.sleep(2000);
+	        
+	        driver.findElement(By.id("lname")).sendKeys("Test-siuk"); 
+	        
+	        try {
+	        	driver.findElement(By.name("submit")).click();
+	        }
+	        catch (Exception e) {        	
+	        }
+	        Thread.sleep(2000);
+	        
+	        driver.findElement(By.id("phone")).sendKeys("9874587895");
+	        try {
+	        	driver.findElement(By.name("submit")).click();
+	        }
+	        catch (Exception e) {        	
+	        }
+	        Thread.sleep(2000);
+	        
+	        driver.findElement(By.name("email")).sendKeys("akhilesh+134430125@studyin-uk.com"); 
+	        try {
+	        	driver.findElement(By.name("submit")).click();
+	        }
+	        catch (Exception e) {        	
+	        }
+	        Thread.sleep(2000);
+
+	        Select drpNationality = new Select(driver.findElement(By.id("nationality")));
+	        drpNationality.selectByValue("111");
+	        Thread.sleep(2000);
+	        
+	        
+	        Select drpCourseInterested = new Select(driver.findElement(By.id("desiredcourse")));
+	        drpCourseInterested.selectByValue("20314");
+	        Thread.sleep(2000);
+	    
+	        Select drpTypeOfStudy = new Select(driver.findElement(By.id("studytype")));
+	        drpTypeOfStudy.selectByVisibleText("Other");
+	        Thread.sleep(2000);
+	      	           
+	        Select drpYearOfStudy = new Select(driver.findElement(By.id("dateddl")));
+	        drpYearOfStudy.selectByValue("01/09/2025");
+	        Thread.sleep(2000);
+	        
+//	        Select drpHowYouHeard = new Select(driver.findElement(By.id("howyouheard")));
+//	        drpHowYouHeard.selectByValue("158");
+//	        Thread.sleep(2000);
+	               
+       
+	        Select selectFairCity = new Select(driver.findElement(By.id("fairiddrp")));
+	        selectFairCity.selectByValue("100785");
+	        Thread.sleep(2000);
+	        
+	        Select preferedDestination = new Select(driver.findElement(By.id("preferred")));
+	        preferedDestination.selectByValue("23");
+	        Thread.sleep(2000);
+//	        
+//	        driver.findElement(By.xpath("//*[@id=\"referform\"]/div/div[11]/div")).click();       
+//	        driver.findElement(By.xpath("//*[@id=\"referform\"]/div/div[11]/div/div/ul/li[2]/label/input")).click();
+
+////	        Element = driver.switch_to.active_element
+//	        Element.send_keys(Keys.ESCAPE)      
+//	              	       	        
+	        driver.findElement(By.name("chkConsent")).click();
+	        
+	        driver.findElement(By.name("submit")).click();
+	        
+	        
+	    
+	          
+	    }
+	}
+

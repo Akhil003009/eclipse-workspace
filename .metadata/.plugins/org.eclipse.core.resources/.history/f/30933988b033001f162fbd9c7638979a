@@ -1,0 +1,48 @@
+package EnquiryFormsScripts;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ConsultationFormSubmit {
+
+	public static void main(String[] args) {
+		
+	// Step1:- Open browser
+		
+		System.getProperty("C:\\Users\\Akhilesh\\SeleniumJavaTraingin\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.studyin-canada.com"); // Open the website
+		
+		driver.manage().window().maximize(); // maximize the window
+		
+		driver.findElement(By.xpath("//*[@class= 'cont-button']//a[@href= '#']")).click(); // Click on "Enquire Now" button
+		
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // wait for 3 sec
+	
+         //input[@id= 'firstname']
+		
+		driver.findElement(By.xpath("//input[@id= 'familyname']")).sendKeys("Test-Siuk");
+		//input[@id= 'familyname']
+		//input[@id= 'mobile']
+		//input[@id= 'email']
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+	}
+
+}

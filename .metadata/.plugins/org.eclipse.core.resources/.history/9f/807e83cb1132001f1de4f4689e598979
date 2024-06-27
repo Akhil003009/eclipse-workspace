@@ -1,0 +1,14 @@
+package javaPackage;
+
+public class OpenBrowser {
+
+	public static void main(String[] args) {
+
+
+		System.getProperty("webdriver.chrome.driver", "C:\\Users\\Akhilesh\\Selenium Java Traingin\\chromedriver-win64\\chromedriver.exe");
+		
+		
+
+	}
+
+}

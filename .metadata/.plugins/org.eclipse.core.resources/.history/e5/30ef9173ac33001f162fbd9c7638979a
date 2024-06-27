@@ -1,0 +1,25 @@
+package EnquiryFormsScripts;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ConsultationFormSubmit {
+
+	public static void main(String[] args) {
+		
+	// Step1:- Open browser
+		
+		System.getProperty("C:\\Users\\Akhilesh\\SeleniumJavaTraingin\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.studyin-canada.com");
+		
+		driver.manage().window().maximize();
+		
+	
+		
+		
+	}
+
+}
