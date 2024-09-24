@@ -16,7 +16,8 @@ public class ConsultationFormSubmit {
 		
 	// Step1:- Open browser
 		
-		System.getProperty("C:\\Users\\Akhilesh\\SeleniumJavaTraingin\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		System.getProperty("webdriver.chrome.driver","C:\\Users\\Akhilesh\\SeleniumJavaTraingin\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		
 		
 		ChromeOptions o = new ChromeOptions();
 		
@@ -40,13 +41,13 @@ public class ConsultationFormSubmit {
 	
     
 		driver.findElement(By.xpath("//input[@id= 'firstname']")).sendKeys("Test-Siuk");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); // wait for 2 sec
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // wait for 3 sec
 		driver.findElement(By.xpath("//input[@id= 'familyname']")).sendKeys("Test-Siuk");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); // wait for 2 sec
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // wait for 3 sec
 		driver.findElement(By.xpath("//input[@id= 'mobile']")).sendKeys("9874589658");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); // wait for 2 sec
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // wait for 3 sec
 		driver.findElement(By.xpath("//input[@id= 'email']")).sendKeys("akhilesh+1344299035@studyin-uk.com");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); // wait for 2 sec
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS); // wait for 3 sec
 
 
 		// Select Nationality
