@@ -1,4 +1,4 @@
-package takeScreenshot;
+package pack1;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class Pract1 {
+public class takeScreenshots {
 
     public static void main(String[] args) {
         // Setup WebDriver using WebDriverManager
@@ -25,7 +25,7 @@ public class Pract1 {
             
             driver.manage().window().maximize();
 
-            // Take a screenshot of the initial page
+            // Take a screenshot of the initial page 
             takeScreenshot(driver, "Home Page");
 
 
