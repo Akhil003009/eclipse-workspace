@@ -1,4 +1,4 @@
-package pack1;
+package testProject;
 
 import java.io.File;
 import java.io.IOException;

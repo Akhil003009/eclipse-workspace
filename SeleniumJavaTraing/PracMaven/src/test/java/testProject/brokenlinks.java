@@ -1,4 +1,4 @@
-package pack1;
+package testProject;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
