@@ -1,4 +1,4 @@
-package pack1;
+package takeScreenshot;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
